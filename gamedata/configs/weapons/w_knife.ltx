@@ -14,8 +14,8 @@ description				= st_knife
 ef_weapon_type			= 1
 
 ;---DOF-------------------------------------------------------------------------
-zoom_dof				= 0.5, 1.0, 180
-reload_dof				= 0.0, 0.5, 5, 1.7
+;zoom_dof				= 0.5, 1.0, 180
+;reload_dof				= 0.0, 0.5, 5, 1.7
 ;-------------------------------------------------------------------------------
 
 ;--- scope weapons -------------------------------------------------------------
@@ -25,12 +25,12 @@ holder_fov_modifier		= 1.0              ; во сколько раз увеличивается eye_fov
 
 cost					= 900
 
-ammo_limit		 		= 120
-ammo_current		 	= 96
+;ammo_limit		 		= 120
+;ammo_current		 	= 96
 ammo_elapsed		 	= 16
 
 ammo_mag_size		 	= 15
-ammo_class		 		= ammo_9x19_fmj, ammo_9x19_pbp
+ammo_class		 		= ammo_9x19_fmj;, ammo_9x19_pbp
 
 hand_dependence		 	= 1
 single_handed			= 1
@@ -70,25 +70,25 @@ cam_max_angle			= 20.0			;максимальный угол отдачи
 cam_max_angle_horz		= 10.0			;(degree) maximum shot horizontal degree
 cam_step_angle_horz		= 0.9				;(degree) size of step camera moved in horizontal position while shooting
 
-fire_dispersion_condition_factor = 5		;увеличение дисперсии в процентах при максимальном износе
-misfire_probability 	= 0.005	    	;вероятность осечки при максимальном износе
+fire_dispersion_condition_factor = 0;5		;увеличение дисперсии в процентах при максимальном износе
+misfire_probability 	= 0;0.005	    	;вероятность осечки при максимальном износе
 condition_shot_dec 		= 0.00130		;увеличение износа при каждом выстреле
 
 ;-------------------------------------------------------------------------------
 ; ttc
-hit_power               = 1.80, 2.00, 2.20, 2.40
+hit_power               = 2.40;1.80, 2.00, 2.20, 2.40
 hit_impulse		        = 10
 hit_type				= wound
 
-hit_power_2             = 1.80, 2.00, 2.20, 2.40
+hit_power_2             = 2.40;1.80, 2.00, 2.20, 2.40
 hit_power_critical_2    = 0.0, 0.0, 0.0, 0.0
 hit_impulse_2	        = 50
 hit_type_2				= wound ;wound_2
 
-hit_probability_gd_novice	= 0.80
-hit_probability_gd_stalker	= 0.80
-hit_probability_gd_veteran	= 0.80
-hit_probability_gd_master	= 0.80
+hit_probability_gd_novice	= 1;0.80
+hit_probability_gd_stalker	= 1;0.80
+hit_probability_gd_veteran	= 1;0.80
+hit_probability_gd_master	= 1;0.80
 
 PDM_disp_base 			= 1.0
 PDM_disp_vel_factor 	= 0.8
@@ -99,7 +99,7 @@ PDM_disp_crouch_no_acc 	= 1.0
 use_aim_bullet			= true		;Поддерживается ли первая суппер пуля
 time_to_aim				= 1.0
 
-fire_distance           = 1.6 ;1.4
+fire_distance           = 1.8;1.6 ;1.4
 bullet_speed		 	= 1000
 rpm                     = 1000
 rpm_empty_click 	 	= 1000
@@ -123,7 +123,7 @@ shell_dir		 				= 0.0, 0.0, 0.4
 shell_particles	 			= weapons\generic_shells
 
 ;-------------------------------------------------------------------------------
-startup_ammo           		= 1000
+;startup_ammo           		= 1000
 wm_size                  	= 0.10
 
 light_disabled					= true
@@ -141,13 +141,13 @@ zoom_enabled					= false
 snd_draw							= weapons\walther_draw
 snd_holster						= weapons\generic_holster
 snd_shoot						= weapons\knife_1
-snd_empty						= weapons\pistol_empty
-snd_reload						= weapons\pm_reload, 0.8
-snd_close						= weapons\generic_close
+;snd_empty						= weapons\pistol_empty
+;snd_reload						= weapons\pm_reload, 0.8
+;snd_close						= weapons\generic_close
 
 
 [wpn_knife_hud]:hud_base
-zoom_hide_crosshair			= true
+;zoom_hide_crosshair			= true
 
 hands_position				= -0.021000,-0.160000,0.002500
 hands_orientation			= -0.500000,1.000000,1.149999
@@ -174,9 +174,9 @@ anm_hide             		= knife_holster
 anm_idle             		= knife_idle
 anm_idle_aim			= knife_idle
 anm_attack			= knife_kick_1
-anm_attack_e			= knife_kick_end1	;--remove me
+;anm_attack_e			= knife_kick_end1	;--remove me
 anm_attack2			= knife_kick_2
-anm_attack2_e			= knife_kick_end2 	;--remove me
+;anm_attack2_e			= knife_kick_end2 	;--remove me
 anm_idle_moving 		= knife_idle_moving
 anm_idle_sprint			= knife_idle_sprint
 anm_bore			= knife_idle_bore
@@ -185,8 +185,8 @@ aim_hud_offset_pos			= -0.077000,0.022000,0.000000
 aim_hud_offset_rot			= 0.000000,0.005000,-0.015000
 
 
-gl_hud_offset_pos				= 0,0,0
-gl_hud_offset_rot				= 0,0,0
+;gl_hud_offset_pos				= 0,0,0
+;gl_hud_offset_rot				= 0,0,0
 
-lean_hud_offset_pos			= 0,0,0
-lean_hud_offset_rot			= 0,0,0
+;lean_hud_offset_pos			= 0,0,0
+;lean_hud_offset_rot			= 0,0,0
