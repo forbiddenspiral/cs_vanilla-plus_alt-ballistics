@@ -14,7 +14,7 @@ description					= st_wpn_beretta_descr
 ef_weapon_type				= 5
 
 ;---DOF-------------------------------------------------------------------------
-zoom_dof					= -1000, 1.0, 1000
+;zoom_dof					= -1000, 1.0, 1000
 reload_dof					= 0.0, 0.5, 5, 2.25
 
 upgrades                = up_gr_ab_beretta, up_gr_cd_beretta, up_gr_e_beretta, up_gr_f_beretta, up_gr_g_beretta, up_gr_h_beretta
@@ -28,12 +28,13 @@ holder_fov_modifier		= 1.0              ; во сколько раз увеличивается eye_fov
 
 cost					= 900
 
-ammo_limit		 		= 120
-ammo_current		 	= 96
+;ammo_limit		 		= 120
+;ammo_current		 	= 96
 ammo_elapsed		 	= 15
 
 ammo_mag_size		 	= 15
 ammo_class		 		= ammo_9x19_fmj, ammo_9x19_pbp
+fire_modes      = 1
 
 hand_dependence		 	= 1
 single_handed			= 1
@@ -46,7 +47,7 @@ control_inertion_factor	= 1
 
 inv_name				= st_wpn_beretta
 inv_name_short			= st_wpn_beretta
-inv_weight				= 1.0
+inv_weight				= 0.97;1.0
 
 inv_grid_width			= 2
 inv_grid_height			= 1
@@ -73,19 +74,20 @@ cam_max_angle_horz		= 5.0			;(degree) maximum shot horizontal degree
 cam_step_angle_horz		= 0.6				;(degree) size of step camera moved in horizontal position while shooting
 
 fire_dispersion_condition_factor = 5		;увеличение дисперсии в процентах при максимальном износе
-misfire_probability 		= 0.005	    	;вероятность осечки при максимальном износе
+misfire_probability 		= 0.003;0.005	    	;вероятность осечки при максимальном износе
+misfire_condition_k 		= 0.05	    	; decane: missing by default
 condition_shot_dec 			= 0.0005		;увеличение износа при каждом выстреле
 
 ;-------------------------------------------------------------------------------
 ; ttc
-hit_power           		= 0.5, 0.5, 0.5, 0.5
-hit_impulse	 		 		= 75
+hit_power           		= 0.37;0.5, 0.5, 0.5, 0.5
+hit_impulse	 		 		= 1;75
 hit_type 					= fire_wound
 
-hit_probability_gd_novice	= 0.80
-hit_probability_gd_stalker	= 0.80
-hit_probability_gd_veteran	= 0.80
-hit_probability_gd_master	= 0.80
+hit_probability_gd_novice	= 1;0.80
+hit_probability_gd_stalker	= 1;0.80
+hit_probability_gd_veteran	= 1;0.80
+hit_probability_gd_master	= 1;0.80
 
 PDM_disp_base 				= 1.0
 PDM_disp_vel_factor 		= 0.3
@@ -96,16 +98,16 @@ PDM_disp_crouch_no_acc 		= 1.0
 use_aim_bullet				= true		;Поддерживается ли первая суппер пуля
 time_to_aim					= 1.0
 
-fire_distance           	= 50
-bullet_speed		 		= 150
+fire_distance           	= 700;50
+bullet_speed		 		= 381;150
 rpm                     	= 270
-rpm_empty_click 	 		= 200
+;rpm_empty_click 	 		= 200
 ; end ttc
 
-silencer_hit_power      	= 0.52
-silencer_hit_impulse	 	= 105
-silencer_fire_distance  	= 100
-silencer_bullet_speed		= 240
+silencer_hit_power      	= 0.37;0.52
+silencer_hit_impulse	 	= 1;105
+silencer_fire_distance  	= 700;100
+silencer_bullet_speed		= 381;240
 
 hud                     	= wpn_beretta_hud
 visual                  	= dynamics\weapons\wpn_beretta92fs\wpn_beretta92fs.ogf
@@ -138,16 +140,16 @@ light_var_color		 	= 0.05
 light_var_range		 	= 0.5
 light_time 		 		= 0.2
 
-ph_mass			 		= 1
+ph_mass			 		= 0.97;1
 
 ;addons
 scope_status			= 0
-silencer_status			= 0
+silencer_status			= 2;0
 grenade_launcher_status	= 0
 
 zoom_enabled					= true
-zoom_rotate_time				= 0.25
-scope_zoom_factor	    		= 55
+;zoom_rotate_time				= 0.25
+scope_zoom_factor	    		= 75;55
 
 ;звуки
 snd_draw						= weapons\walther_draw
@@ -155,14 +157,14 @@ snd_holster						= weapons\generic_holster
 snd_shoot						= weapons\n_beretta_shot
 snd_empty						= weapons\pistol_empty
 snd_reload						= weapons\pistol_reload
-snd_close						= weapons\generic_close
+;snd_close						= weapons\generic_close
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; silencer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 silencer_name  				= wpn_addon_silencer		; section name for the attachable silencer
-silencer_x 					= 65						; offset in inventory icon
+silencer_x 					= 54;65						; offset in inventory icon
 silencer_y 					= -17
 
 ;params when silencer is attached
@@ -178,7 +180,7 @@ silencer_light_var_range	= 0.5
 silencer_light_time 		= 0.2
 
 [wpn_beretta_hud]:hud_base
-zoom_hide_crosshair = true
+;zoom_hide_crosshair = false
 
 
 hands_position					= -0.021000,-0.160000, 0.002500
@@ -225,11 +227,11 @@ anm_bore_empty			= beretta_idle_bore, beretta_opened
 aim_hud_offset_pos				= -0.107200, 0.039800, 0.000000
 aim_hud_offset_rot				=  0.005000, 0.007500,-0.035000
 
-gl_hud_offset_pos				= 0,0,0
-gl_hud_offset_rot				= 0,0,0
+;gl_hud_offset_pos				= 0,0,0
+;gl_hud_offset_rot				= 0,0,0
 
-lean_hud_offset_pos				= 0,0,0
-lean_hud_offset_rot				= 0,0,0
+;lean_hud_offset_pos				= 0,0,0
+;lean_hud_offset_rot				= 0,0,0
 
 aim_hud_offset_pos_16x9			= -0.167200, 0.071500, 0.000000
 aim_hud_offset_rot_16x9			=  0.037500, 0.056000, 0.002500
