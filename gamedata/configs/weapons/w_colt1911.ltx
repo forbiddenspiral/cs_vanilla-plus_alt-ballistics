@@ -14,7 +14,7 @@ description					= st_wpn_colt1911_descr
 ef_weapon_type					= 5
 
 ;---DOF-------------------------------------------------------------------------
-zoom_dof					= -1000, 1.0, 1000 
+;zoom_dof					= -1000, 1.0, 1000 
 reload_dof				= 0.0, 0.5, 5, 2.25
 
 ;-----------------------------------------------------------------------------
@@ -30,12 +30,13 @@ holder_fov_modifier		= 1.0              ; во сколько раз увеличивается eye_fov
 
 cost					= 1500
 
-ammo_limit		 		= 120
-ammo_current		 	= 90
+;ammo_limit		 		= 120
+;ammo_current		 	= 90
 ammo_elapsed		 	= 12
 
 ammo_mag_size		 	= 7
 ammo_class		 		= ammo_11.43x23_fmj, ammo_11.43x23_hydro
+fire_modes		 		= 1
 
 hand_dependence		 	= 1
 single_handed			= 1
@@ -80,14 +81,14 @@ misfire_condition_k			= 0.05
 condition_shot_dec			= 0.0002 ;увеличение износа при каждом выстреле
 ;-------------------------------------------------------------------------------
 ; ttc
-hit_power           		= 0.5, 0.5, 0.5, 0.5
-hit_impulse		 			= 75
+hit_power           		= 0.45;0.5, 0.5, 0.5, 0.5
+hit_impulse		 			= 1;75
 hit_type 					= fire_wound
 
-hit_probability_gd_novice	= 0.80
-hit_probability_gd_stalker	= 0.80
-hit_probability_gd_veteran	= 0.80
-hit_probability_gd_master	= 0.80
+hit_probability_gd_novice	= 1;0.80
+hit_probability_gd_stalker	= 1;0.80
+hit_probability_gd_veteran	= 1;0.80
+hit_probability_gd_master	= 1;0.80
 
 PDM_disp_base 				= 1.0
 PDM_disp_vel_factor 		= 0.4
@@ -98,16 +99,16 @@ PDM_disp_crouch_no_acc 		= 1.0
 use_aim_bullet				= true		;Поддерживается ли первая суппер пуля
 time_to_aim					= 1.0
 
-fire_distance       		= 50
-bullet_speed				= 150
+fire_distance       		= 700;50
+bullet_speed				= 251;150
 rpm                 		= 300
-rpm_empty_click      		= 250
+;rpm_empty_click      		= 250
 ; end ttc
 
-silencer_hit_power      	= 0.52
-silencer_hit_impulse	 	= 105
-silencer_fire_distance  	= 100
-silencer_bullet_speed		= 240
+silencer_hit_power      	= 0.45;0.52
+silencer_hit_impulse	 	= 1;105
+silencer_fire_distance  	= 700;100
+silencer_bullet_speed		= 251;240
 
 ;-------------------------------------------------------------------------------
 hud                      	= wpn_colt1911_hud
@@ -140,7 +141,7 @@ light_var_color		 		= 0.05
 light_var_range		 		= 0.5
 light_time 		 				= 0.2
 
-ph_mass			 				= 1
+ph_mass			 				= 1.1;1
 ;cost			 					= 350
 
 ;addons
@@ -149,8 +150,8 @@ silencer_status				= 2
 grenade_launcher_status		= 0
 
 zoom_enabled					= true
-zoom_rotate_time				= 0.25
-scope_zoom_factor	    		= 55
+;zoom_rotate_time				= 0.25
+scope_zoom_factor	    		= 75;55
 
 ;звуки
 snd_draw							= weapons\walther_draw
@@ -158,15 +159,15 @@ snd_holster						= weapons\generic_holster
 snd_shoot						= weapons\n_colt1911_shot
 snd_empty						= weapons\pistol_empty
 snd_reload						= weapons\pistol_reload
-snd_close						= weapons\generic_close
+;snd_close						= weapons\generic_close
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; silencer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 silencer_name  			= wpn_addon_silencer		; section name for the attachable silencer
-silencer_x 				= 62						; offset in inventory icon
-silencer_y 				= -15
+silencer_x 				= 55;62						; offset in inventory icon
+silencer_y 				= -16;-15
 
 ;params when silencer is attached
 ;similar to corresponding params without prefix silencer_
@@ -181,7 +182,7 @@ silencer_light_var_range	= 0.5
 silencer_light_time 		= 0.2
 
 [wpn_colt1911_hud]:hud_base
-zoom_hide_crosshair = true
+;zoom_hide_crosshair = false
 
 
 hands_position					= -0.021000,-0.160000,0.002500
@@ -202,8 +203,8 @@ fire_point						= 0,0.043,0.187
 fire_bone               	= wpn_body
 
 ;-delme begin
-anm_empty             	= walter99_idle, walter99_opened
-anm_close				= walter99_holster
+;anm_empty             	= walter99_idle, walter99_opened
+;anm_close				= walter99_holster
 ;-delme end
 anm_show					= colt1911_draw
 anm_show_empty				= colt1911_draw, colt1911_opened
@@ -230,14 +231,14 @@ anm_bore_empty					= colt1911_idle_bore, colt1911_opened
 aim_hud_offset_pos				= -0.105500, 0.036650, 0.000000
 aim_hud_offset_rot				= -0.003500, 0.005000,-0.007500
 
-gl_hud_offset_pos				= 0,0,0
-gl_hud_offset_rot				= 0,0,0
+;gl_hud_offset_pos				= 0,0,0
+;gl_hud_offset_rot				= 0,0,0
 
 aim_hud_offset_pos_16x9			= -0.167400, 0.066200, 0.000000
 aim_hud_offset_rot_16x9			=  0.027500, 0.056000, 0.025000
 
-lean_hud_offset_pos				= 0,0,0
-lean_hud_offset_rot				= 0,0,0
+;lean_hud_offset_pos				= 0,0,0
+;lean_hud_offset_rot				= 0,0,0
 
 ;-----------------------------------------------------------------------------
 ; Уникальные
@@ -246,5 +247,5 @@ lean_hud_offset_rot				= 0,0,0
 $spawn                  	= "weapons\colt1911_up"					; option for Level Editor
 
 upgrades                = up_gr_ab_colt1911, up_gr_cd_colt1911, up_gr_e_colt1911, up_gr_f_colt1911, up_gr_g_colt1911
-installed_upgrades      = up_b_colt1911, up_d_colt1911, up_bd_colt1911, up_e_colt1911, up_f_colt1911, up_g_colt1911,
+installed_upgrades      = up_b_colt1911, up_d_colt1911, up_bd_colt1911, up_e_colt1911, up_f_colt1911, up_g_colt1911
 upgrade_scheme          = upgrade_scheme_u9
