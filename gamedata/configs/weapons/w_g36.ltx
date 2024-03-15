@@ -16,7 +16,7 @@ ef_weapon_type          = 6
 
 default_to_ruck         = false
 sprint_allowed       	= true
-control_inertion_factor = 1.0
+;control_inertion_factor = 1.0
 
 ;---DOF-------------------------------------------------------------------------
 ;zoom_dof					= 0.5, 1.0, 180
@@ -34,8 +34,8 @@ upgrade_scheme          = upgrade_scheme_u15
 cost                 	= 10000
 weapon_class            = assault_rifle        ; Type of the weapon
 
-ammo_limit              = 210
-ammo_current            = 180
+;ammo_limit              = 210
+;ammo_current            = 180
 ammo_elapsed            = 30
 
 ammo_mag_size           = 30
@@ -70,7 +70,7 @@ control_inertion_factor    = 1.2f
 
 ;отдача
 cam_relax_speed        = 6		;скорость возврата в исходное положение
-cam_relax_speed_ai     = 120.75
+cam_relax_speed_ai     = 360;120.75
 cam_dispersion         = 0.2	;увеличения угла (в градусах) с каждым выстрелом
 cam_dispersion_inc     = 0.2    ;увеличениe cam_dispersion с каждым выстрелом
 cam_dispersion_frac    = 0.7    ;ствол будет подыматься на cam_dispersion*cam_dispersion_frac +- cam_dispersion*(1-cam_dispersion_frac)
@@ -79,7 +79,7 @@ cam_max_angle_horz     = 7.0   ;(degree) maximum shot horizontal degree
 cam_step_angle_horz    = 1.0    ; (degree) size of step camera moved in horizontal position while shooting
 
 zoom_cam_relax_speed         = 6     ; scope & ironsight
-zoom_cam_relax_speed_ai      = 360
+zoom_cam_relax_speed_ai      = 120.75;360
 zoom_cam_dispersion          = 0.1
 zoom_cam_dispersion_inc      = 0.1
 zoom_cam_dispersion_frac     = 0.7
@@ -88,7 +88,7 @@ zoom_cam_max_angle_horz      = 7.0
 zoom_cam_step_angle_horz     = 0.7
 
 fire_dispersion_condition_factor = 5        ;увеличение дисперсии в процентах при максимальном износе
-misfire_probability     = 0.003        ;вероятность осечки при максимальном износе
+misfire_probability     = 0.002;0.003        ;вероятность осечки при максимальном износе
 misfire_condition_k     = 0.05
 condition_shot_dec      = 0.0002 ;увеличение износа при каждом выстреле
 ;-------------------------------------------------------------------------------
@@ -114,19 +114,19 @@ PDM_disp_crouch         = 1.0
 PDM_disp_crouch_no_acc  = 1.0
 
 ; ttc
-hit_power               = 0.4, 0.4, 0.4, 0.4
-hit_impulse             = 100
+hit_power               = 0.67;0.4, 0.4, 0.4, 0.4
+hit_impulse             = 1;100
 hit_type				= fire_wound
 
-hit_probability_gd_novice  = 0.80
-hit_probability_gd_stalker = 0.80
-hit_probability_gd_veteran = 0.80
-hit_probability_gd_master  = 0.80
+hit_probability_gd_novice  = 1;0.80
+hit_probability_gd_stalker = 1;0.80
+hit_probability_gd_veteran = 1;0.80
+hit_probability_gd_master  = 1;0.80
 
-fire_distance           = 150
-bullet_speed            = 400 ;начальная скорость пули
-rpm                     = 700
-rpm_empty_click         = 200
+fire_distance           = 1000;150
+bullet_speed            = 925;400 ;начальная скорость пули
+rpm                     = 750;700
+;rpm_empty_click         = 200
 ; end ttc
 
 use_aim_bullet          = true                ;Поддерживается ли первая суппер пуля
@@ -141,7 +141,7 @@ strap_orientation       = -15,-9,110                                	; (3rd pers
 strap_bone0             = bip01_spine2
 strap_bone1             = bip01_spine1
 
-startup_ammo            = 90
+;startup_ammo            = 90
 visual                       = dynamics\weapons\wpn_g36\wpn_g36.ogf
 
 light_disabled				= false
@@ -151,7 +151,7 @@ light_var_color         = 0.05
 light_var_range         = 0.5
 light_time              = 0.2
 
-ph_mass                 = 4
+ph_mass                 = 3.6;4
 ;cost                   = 2100
 
 ;addons
@@ -163,11 +163,11 @@ zoom_enabled            = true                                                ; 
 scope_zoom_factor       = 33.3         ;1.8X    ; fov for zoom mode
 
 scope_texture			= wpn_crosshair_g36
-scope_name              = wpn_addon_scope_susat
-scope_x                 = 78
-scope_y                 = 0
+;scope_name              = wpn_addon_scope_susat
+;scope_x                 = 78
+;scope_y                 = 0
 silencer_name           = wpn_addon_silencer
-silencer_x              = 214
+silencer_x              = 201;214
 silencer_y              = 12
 grenade_launcher_name   = wpn_addon_grenade_launcher_m203
 grenade_launcher_x      = 130
@@ -187,10 +187,10 @@ snd_bore1				= weapons\mp5_bore
 snd_bore				= weapons\draw_silent
 
 ;настройки для глушителя
-silencer_hit_power      = 0.55, 0.55, 0.55, 0.55
-silencer_hit_impulse    = 85
-silencer_fire_distance  = 250
-silencer_bullet_speed   = 600
+silencer_hit_power      = 0.67;0.55, 0.55, 0.55, 0.55
+silencer_hit_impulse    = 1;85
+silencer_fire_distance  = 1000;250
+silencer_bullet_speed   = 925;600
 
 ;silencer_flame_particles  = weapons\generic_weapon01
 silencer_smoke_particles   = weapons\generic_shoot_00
@@ -205,7 +205,7 @@ silencer_light_time     = 0.2
 
 
 [wpn_g36_hud]:hud_base
-zoom_hide_crosshair	= true
+;zoom_hide_crosshair	= false
 attach_place_idx	= 0
 item_visual		= dynamics\weapons\wpn_g36\wpn_g36_hud.ogf
 
@@ -276,8 +276,8 @@ gl_hud_offset_rot	= 0,0,0;-0.145000,0.000000,0.000000
 gl_hud_offset_pos_16x9	= 0,0,0;-0.053000,-0.059000,0.000000
 gl_hud_offset_rot_16x9	= 0,0,0;-0.145000,0.000000,0.000000
 
-lean_hud_offset_pos	= 0,0,0
-lean_hud_offset_rot	= 0,0,0
+;lean_hud_offset_pos	= 0,0,0
+;lean_hud_offset_rot	= 0,0,0
 
 ;-----------------------------------------------------------------------------
 ; Уникальные
