@@ -16,10 +16,10 @@ ef_weapon_type          = 6
 
 default_to_ruck         = false
 sprint_allowed          = true
-control_inertion_factor = 1.0
+;control_inertion_factor = 1.0
 
 ;---DOF-------------------------------------------------------------------------
-zoom_dof             = 0.5, 1.0, 180
+zoom_dof             = 0.5, 1.0, 1000;180
 reload_dof           = 0.0, 0.5, 5, 2.85
 ;-------------------------------------------------------------------------------
 holder_range_modifier   = 1.0                       ; во сколько раз увеличивается eye_range
@@ -33,8 +33,8 @@ upgrade_scheme          = upgrade_scheme_u10a
 cost              = 3000            ; the price of the item
 weapon_class      = assault_rifle      ; the type of the box that will be used in buy-menu in multiplayer mode
 
-ammo_limit        = 210          ; obsolete
-ammo_elapsed      = 30           ; obsolete
+;ammo_limit        = 210          ; obsolete
+;ammo_elapsed      = 30           ; obsolete
 ammo_elapsed      = 30
 
 ammo_mag_size     = 30           ; clip (magazine) size
@@ -51,7 +51,7 @@ slot              = 2                ; // secondary
 animation_slot    = 8                ; type of the animation that will be used
 inv_name          = st_wpn_mp5               ; name in inventory
 inv_name_short    = st_wpn_mp5
-inv_weight        = 2.5
+inv_weight        = 2.88;2.5
 
 inv_grid_width    = 3
 inv_grid_height   = 1
@@ -70,7 +70,7 @@ control_inertion_factor = 1.2f
 
 ;отдача
 cam_relax_speed      = 5		;скорость возврата в исходное положение
-cam_relax_speed_ai   = 120.75
+cam_relax_speed_ai   = 360;120.75
 cam_dispersion       = 0.2		;увеличения угла (в градусах) с каждым выстрелом
 cam_dispersion_inc   = 0.5		;увеличениe cam_dispersion с каждым выстрелом
 cam_dispersion_frac  = 0.7		;ствол будет подыматься на cam_dispersion*cam_dispersion_frac +- cam_dispersion*(1-cam_dispersion_frac)
@@ -115,19 +115,19 @@ PDM_disp_crouch         = 1.0
 PDM_disp_crouch_no_acc  = 1.0
 
 ; ttc
-hit_power            = 0.5, 0.5, 0.5, 0.5
-hit_impulse          = 100    ; size of physic impulse by bullet
+hit_power            = 0.38;0.5, 0.5, 0.5, 0.5
+hit_impulse          = 1;100    ; size of physic impulse by bullet
 hit_type             = fire_wound            ; [] type of the wound
 
-hit_probability_gd_novice  = 0.80
-hit_probability_gd_stalker = 0.80
-hit_probability_gd_veteran = 0.80
-hit_probability_gd_master  = 0.80
+hit_probability_gd_novice  = 1;0.80
+hit_probability_gd_stalker = 1;0.80
+hit_probability_gd_veteran = 1;0.80
+hit_probability_gd_master  = 1;0.80
 
-fire_distance           = 50                  ; maximum fire distance that bullet can fly
-bullet_speed            = 250                ; starting bullet speed
-rpm                     = 700
-rpm_empty_click         = 200
+fire_distance           = 1000;50                  ; maximum fire distance that bullet can fly
+bullet_speed            = 400;250                ; starting bullet speed
+rpm                     = 800;700
+;rpm_empty_click         = 200
 ; end ttc
 
 use_aim_bullet          = true                ;Поддерживается ли первая суппер пуля
@@ -142,7 +142,7 @@ strap_orientation      	= -10,-5,10					; (3rd person view in degrees)
 strap_bone0             = bip01_spine2
 strap_bone1             = bip01_spine1
 
-startup_ammo            = 90
+;startup_ammo            = 90
 visual                  = dynamics\weapons\wpn_mp5\wpn_mp5.ogf
 
 light_disabled                                = false
@@ -152,7 +152,7 @@ light_var_color         = 0.05
 light_var_range         = 0.5
 light_time              = 0.2
 
-ph_mass                 = 3
+ph_mass                 = 2.88;3
 
 ;addons
 scope_status            = 0                   ; 0 - no addon
@@ -160,18 +160,18 @@ silencer_status         = 2                   ; 1 - permanent
 grenade_launcher_status = 0                   ; 2 - attachable
 
 zoom_enabled            = true                                                ; (on,off)zoom mode (right mouse button)
-zoom_rotate_time        = 0.25
-scope_zoom_factor       = 50                                                ; fov for zoom mode
+;zoom_rotate_time        = 0.25
+scope_zoom_factor       = 75;50                                                ; fov for zoom mode
 
-scope_name              = wpn_addon_scope       ; section name for the attachable scope
-scope_x              	= 47                 ; offset in inventory icon
-scope_y                 = 0
+;scope_name              = wpn_addon_scope       ; section name for the attachable scope
+;scope_x              	= 47                 ; offset in inventory icon
+;scope_y                 = 0
 silencer_name           = wpn_addon_silencer    ; section name for the attachable silencer
-silencer_x              = 130 ;218                ; offset in inventory icon
-silencer_y              = -13
-grenade_launcher_name   = wpn_addon_grenade_launcher; section name for the attachable grenade launcher
-grenade_launcher_x      = 126                ; offset in inventory icon
-grenade_launcher_y      = 24
+silencer_x              = 107;130 ;218                ; offset in inventory icon
+silencer_y              = -15;-13
+;grenade_launcher_name   = wpn_addon_grenade_launcher; section name for the attachable grenade launcher
+;grenade_launcher_x      = 126                ; offset in inventory icon
+;grenade_launcher_y      = 24
 
 ;звуки
 snd_draw                = weapons\ak74_draw
@@ -180,19 +180,19 @@ snd_shoot               = weapons\n_mp5_shot
 
 snd_empty               = weapons\gen_empty
 snd_reload              = weapons\mp5_reload
-snd_shoot_grenade       = weapons\gen_grenshoot
-snd_reload_grenade      = weapons\gen_grenload
-snd_switch              = weapons\groza_switch
+;snd_shoot_grenade       = weapons\gen_grenshoot
+;snd_reload_grenade      = weapons\gen_grenload
+;snd_switch              = weapons\groza_switch
 ;snd_bore				= weapons\mp5_bore
 ;snd_bore1				= weapons\draw_silent
 snd_bore1				= weapons\mp5_bore
 snd_bore				= weapons\draw_silent
 
 ;настройки для глушителя
-silencer_hit_power      = 0.55, 0.55, 0.55, 0.55
-silencer_hit_impulse    = 120
-silencer_fire_distance  = 250
-silencer_bullet_speed   = 600
+silencer_hit_power      = 0.38;0.55, 0.55, 0.55, 0.55
+silencer_hit_impulse    = 1;120
+silencer_fire_distance  = 1000;250
+silencer_bullet_speed   = 400;600
 
 ;silencer_flame_particles  = weapons\generic_weapon01
 silencer_smoke_particles   = weapons\generic_shoot_00
@@ -207,7 +207,7 @@ silencer_light_time     = 0.2
 
 
 [wpn_mp5_hud]
-zoom_hide_crosshair     = true
+;zoom_hide_crosshair     = false
 attach_place_idx        = 0
 item_visual             = dynamics\weapons\wpn_mp5\wpn_mp5_hud.ogf
 
@@ -275,8 +275,8 @@ gl_hud_offset_rot				= 0,0,0
 gl_hud_offset_pos_16x9			= 0,0,0
 gl_hud_offset_rot_16x9			= 0,0,0
 
-lean_hud_offset_pos				= 0,0,0
-lean_hud_offset_rot				= 0,0,0
+;lean_hud_offset_pos				= 0,0,0
+;lean_hud_offset_rot				= 0,0,0
 
 ;-----------------------------------------------------------------------------
 ; Уникальные
