@@ -16,10 +16,10 @@ ef_weapon_type          = 6
 
 default_to_ruck         = false
 sprint_allowed          = true
-control_inertion_factor = 1.0
+;control_inertion_factor = 1.0
 
 ;---DOF-------------------------------------------------------------------------
-zoom_dof             = 0.5, 1.0, 180
+zoom_dof             = 0.5, 1.0, 1000;180
 reload_dof           = 0.0, 0.5, 5, 2.85
 ;-------------------------------------------------------------------------------
 
@@ -35,8 +35,8 @@ upgrade_scheme          = upgrade_scheme_u16a
 cost                 	= 6000
 weapon_class            = assault_rifle
 
-ammo_limit              = 210
-ammo_current            = 30
+;ammo_limit              = 210
+;ammo_current            = 30
 ammo_elapsed            = 30
 
 ammo_mag_size        	= 30           ; clip (magazine) size
@@ -51,7 +51,7 @@ single_handed           = 0
 
 inv_name             	= st_wpn_lr300
 inv_name_short          = st_wpn_lr300
-inv_weight              = 2.7
+inv_weight              = 3.27;2.7
 
 inv_grid_width			= 5
 inv_grid_height			= 2
@@ -80,7 +80,7 @@ cam_max_angle_horz      	= 10.0	;(degree) maximum shot horizontal degree
 cam_step_angle_horz     	= 1.2	;(degree) size of step camera moved in horizontal position while shooting
 
 zoom_cam_relax_speed        = 5    ; scope & ironsight
-zoom_cam_relax_speed_ai     = 360
+zoom_cam_relax_speed_ai     = 120.75;360
 zoom_cam_dispersion         = 0.1
 zoom_cam_dispersion_inc     = 0.1
 zoom_cam_dispersion_frac    = 0.7
@@ -115,19 +115,19 @@ PDM_disp_crouch	 		= 1.0
 PDM_disp_crouch_no_acc 	= 1.0
 
 ; ttc
-hit_power         = 0.35, 0.35, 0.35, 0.35
-hit_impulse       = 100
+hit_power         = 0.6;0.35, 0.35, 0.35, 0.35
+hit_impulse       = 1;100
 hit_type          = fire_wound
 
-hit_probability_gd_novice  = 0.80
-hit_probability_gd_stalker = 0.80
-hit_probability_gd_veteran = 0.80
-hit_probability_gd_master  = 0.80
+hit_probability_gd_novice  = 1;0.80
+hit_probability_gd_stalker = 1;0.80
+hit_probability_gd_veteran = 1;0.80
+hit_probability_gd_master  = 1;0.80
 
-fire_distance        = 150
-bullet_speed         = 400 ;начальная скорость пули
-rpm                  = 700
-rpm_empty_click      = 200
+fire_distance        = 1000;150
+bullet_speed         = 920;400 ;начальная скорость пули
+rpm                  = 950;700
+;rpm_empty_click      = 200
 ; end ttc
 
 use_aim_bullet          = true                ;Поддерживается ли первая суппер пуля
@@ -142,7 +142,7 @@ strap_orientation      		= -10,-5,10					; (3rd person view in degrees)
 strap_bone0             = bip01_spine2
 strap_bone1             = bip01_spine1
 
-startup_ammo               = 90
+;startup_ammo               = 90
 visual                     = dynamics\weapons\wpn_lr300\wpn_lr300.ogf
 
 light_disabled          = false
@@ -152,7 +152,7 @@ light_var_color         = 0.05
 light_var_range         = 0.1
 light_time              = 0.2
 
-ph_mass                 = 3
+ph_mass                 = 3.27;3
 ;cost                   = 2100
 
 ;addons
@@ -161,15 +161,15 @@ silencer_status            = 2                   ; 1 - permanent
 grenade_launcher_status    = 0                   ; 2 - attachable
 
 zoom_enabled            = true                                                ; (on,off)zoom mode (right mouse button)
-zoom_rotate_time        = 0.25
-scope_zoom_factor       = 50                                                ; fov for zoom mode
+;zoom_rotate_time        = 0.25
+scope_zoom_factor       = 75;50                                                ; fov for zoom mode
 scope_texture				= wpn_crosshair_l85
 
 scope_name 					= wpn_addon_scope_susat
-scope_x 					= 75
+scope_x 					= 80;75
 scope_y 					= -5
 silencer_name              = wpn_addon_silencer    ; section name for the attachable silencer
-silencer_x              = 210                ; offset in inventory icon
+silencer_x              = 200;210                ; offset in inventory icon
 silencer_y              = 9
 grenade_launcher_name      = wpn_addon_grenade_launcher_m203; section name for the attachable grenade launcher
 grenade_launcher_x         = 128                ; offset in inventory icon
@@ -179,7 +179,7 @@ grenade_launcher_y         = 28
 snd_draw                = weapons\generic_draw
 snd_holster       = weapons\generic_holster
 snd_shoot         = weapons\n_lr300_shot
-snd_shoot               = weapons\n_lr300_shot
+;snd_shoot               = weapons\n_lr300_shot
 
 snd_empty               = weapons\gen_empty
 snd_reload              = weapons\groza_reload
@@ -190,10 +190,10 @@ snd_bore1				= weapons\mp5_bore
 snd_bore				= weapons\draw_silent
 
 ;настройки для глушителя
-silencer_hit_power      = 0.55, 0.55, 0.55, 0.55
-silencer_hit_impulse    = 120
-silencer_fire_distance  = 250
-silencer_bullet_speed   = 600
+silencer_hit_power      = 0.6;0.55, 0.55, 0.55, 0.55
+silencer_hit_impulse    = 1;120
+silencer_fire_distance  = 1000;250
+silencer_bullet_speed   = 920;600
 
 ;silencer_flame_particles  = weapons\generic_weapon01
 silencer_smoke_particles   = weapons\generic_shoot_00
@@ -208,7 +208,7 @@ silencer_light_time     = 0.2
 
 
 [wpn_lr300_hud]
-zoom_hide_crosshair        = true
+;zoom_hide_crosshair        = false
 attach_place_idx        = 0
 item_visual                = dynamics\weapons\wpn_lr300\wpn_lr300_hud.ogf
 
@@ -275,8 +275,8 @@ gl_hud_offset_rot				= 0,0,0
 gl_hud_offset_pos_16x9			= 0,0,0
 gl_hud_offset_rot_16x9			= 0,0,0
 
-lean_hud_offset_pos				= 0,0,0
-lean_hud_offset_rot				= 0,0,0
+;lean_hud_offset_pos				= 0,0,0
+;lean_hud_offset_rot				= 0,0,0
 
 ;-----------------------------------------------------------------------------
 ; Уникальные
