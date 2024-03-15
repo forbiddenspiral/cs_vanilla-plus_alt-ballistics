@@ -22,7 +22,7 @@ ef_main_weapon_type		= 4
 ef_weapon_type			= 9
 
 ;---DOF-------------------------------------------------------------------------
-zoom_dof			= 0.5, 1.0, 180
+zoom_dof			= 0.5, 1.0, 1000;180
 reload_dof			= 0.0, 0.5, 5, 3.0
 ;-------------------------------------------------------------------------------
 
@@ -34,12 +34,13 @@ holder_fov_modifier		= 0.3              ; во сколько раз увеличивается eye_fov
 cost					= 25000
 weapon_class			= heavy_weapon
 
-ammo_limit		 		= 120
-ammo_current		 	= 96
+;ammo_limit		 		= 120
+;ammo_current		 	= 96
 ammo_elapsed		 	= 12
 
 ammo_mag_size		 	= 1
 ammo_class		 		= ammo_og-7b
+fire_modes		 		= 1
 
 hand_dependence		 	= 1
 single_handed			= 0
@@ -51,7 +52,7 @@ launch_speed			= 5
 
 inv_name				= st_wpn_rpg7
 inv_name_short			= st_wpn_rpg7
-inv_weight				= 6.3
+inv_weight				= 7;6.3
 
 inv_grid_width				= 5
 inv_grid_height				= 1
@@ -65,7 +66,7 @@ kill_msg_height				= 19
 
 ;-------------------------------------------------------------------------------
 ;базовая дисперсия
-fire_dispersion_base			= 1.5   ;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
+fire_dispersion_base			= 1.2;1.5   ;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
 
 ;отдача
 cam_relax_speed         = 2.0	;скорость возврата в исходное положение
@@ -98,11 +99,11 @@ smoke_particles		   	= weapons\generic_weapon02;generic_rpg_shot
 ; ttc
 ;---------------------------------------------------------------
 hit_power       		= 3.00
-hit_impulse				= 100
+hit_impulse				= 1;100
 hit_type 				= explosion
 
-fire_distance           = 400
-bullet_speed			= 100 ;300			;начальная скорость пули
+fire_distance           = 920;400
+bullet_speed			= 115;100 ;300			;начальная скорость пули
 rpm                     = 200
 
 
@@ -128,7 +129,7 @@ light_var_color		 		= 0.05
 light_var_range		 		= 0.5
 light_time 		 		= 0.75
 
-ph_mass			 		= 1
+ph_mass			 		= 7;1
 
 scope_status				= 1
 silencer_status				= 0
@@ -174,11 +175,11 @@ aim_hud_offset_rot				= 0.010000,0.002500,-0.010000
 aim_hud_offset_pos_16x9     	= -0.05000,-0.022500,-0.130500
 aim_hud_offset_rot_16x9     	= 0.012500,-0.012500,-0.010000
 
-gl_hud_offset_pos					= 0,0,0
-gl_hud_offset_rot					= 0,0,0
+;gl_hud_offset_pos					= 0,0,0
+;gl_hud_offset_rot					= 0,0,0
 
-lean_hud_offset_pos				= 0,0,0
-lean_hud_offset_rot				= 0,0,0
+;lean_hud_offset_pos				= 0,0,0
+;lean_hud_offset_rot				= 0,0,0
 
 anm_show								= rpg7_draw
 anm_hide								= rpg7_holster
@@ -248,7 +249,7 @@ snd_fly_sound				= weapons\rocket_fly
 ;свойства которые читаются, но не используются (надо убрать)
 inv_name					= "Og-7b"
 inv_name_short				= "Og-7b"
-inv_weight					= .2
+inv_weight					= 0.2;.2
 
 inv_grid_width				= 4
 inv_grid_height				= 1
