@@ -14,7 +14,7 @@ description					= st_wpn_pb_descr
 ef_weapon_type				= 5
 
 ;---DOF-------------------------------------------------------------------------
-zoom_dof					= -1000, 1.0, 1000 
+;zoom_dof					= -1000, 1.0, 1000 
 reload_dof				= 0.0, 0.5, 5, 2.25
 ;-----------------------------------------------------------------------------
 upgrades                = up_gr_ab_pb, up_gr_c_pb, up_gr_d_pb, up_gr_e_pb
@@ -28,12 +28,13 @@ holder_fov_modifier		= 1.0              ; во сколько раз увеличивается eye_fov
 
 cost					= 400
 
-ammo_limit		 		= 120
-ammo_current		 	= 96
+;ammo_limit		 		= 120
+;ammo_current		 	= 96
 ammo_elapsed		 	= 8
 
 ammo_mag_size		 	= 8
 ammo_class		 		= ammo_9x18_fmj, ammo_9x18_pmm
+fire_modes		 		= 1
 
 hand_dependence		 	= 1
 single_handed			= 1
@@ -46,7 +47,7 @@ control_inertion_factor	= 1
 
 inv_name				= st_wpn_pb
 inv_name_short			= st_wpn_pb
-inv_weight				= 0.7
+inv_weight				= 0.97;0.7
 
 inv_grid_width			= 2
 inv_grid_height			= 1
@@ -74,18 +75,19 @@ cam_step_angle_horz		= 1.0				;(degree) size of step camera moved in horizontal 
 
 fire_dispersion_condition_factor = 5		;увеличение дисперсии в процентах при максимальном износе
 misfire_probability 			= 0.002	    	;вероятность осечки при максимальном износе
-condition_shot_dec 			= 0.002		;увеличение износа при каждом выстреле
+misfire_condition_k 			= 0.05	    	; decane: missing by default
+condition_shot_dec 			= 0.0002;0.002		;увеличение износа при каждом выстреле
 
 ;-------------------------------------------------------------------------------
 ; ttc
-hit_power           		= 0.5, 0.5, 0.5, 0.5
-hit_impulse	 		 		= 80
+hit_power           		= 0.32;0.5, 0.5, 0.5, 0.5
+hit_impulse	 		 		= 1;80
 hit_type 					= fire_wound
 
-hit_probability_gd_novice	= 0.80
-hit_probability_gd_stalker	= 0.80
-hit_probability_gd_veteran	= 0.80
-hit_probability_gd_master	= 0.80
+hit_probability_gd_novice	= 1;0.80
+hit_probability_gd_stalker	= 1;0.80
+hit_probability_gd_veteran	= 1;0.80
+hit_probability_gd_master	= 1;0.80
 
 PDM_disp_base 				= 0.8
 PDM_disp_vel_factor 		= 0.2
@@ -96,16 +98,16 @@ PDM_disp_crouch_no_acc 		= 1.0
 use_aim_bullet					= true		;Поддерживается ли первая суппер пуля
 time_to_aim						= 1.0
 
-fire_distance           	= 30
-bullet_speed		 		= 180
+fire_distance           	= 700;30
+bullet_speed		 		= 290;180
 rpm                     	= 250
-rpm_empty_click 	 		= 200
+;rpm_empty_click 	 		= 200
 ; end ttc
 
-silencer_hit_power      	= 0.52
-silencer_hit_impulse	 	= 105
-silencer_fire_distance  	= 100
-silencer_bullet_speed		= 240
+;silencer_hit_power      	= 0.52
+;silencer_hit_impulse	 	= 105
+;silencer_fire_distance  	= 100
+;silencer_bullet_speed		= 240
 
 ;-------------------------------------------------------------------------------
 hud                     	= wpn_pb_hud
@@ -122,7 +124,7 @@ fire_point              	= 0.0, 0.104, 0.273
 ;strap_bone0					= bip01_spine2
 ;strap_bone1					= bip01_spine1
 
-flame_particles		   	= weapons\generic_weapon03
+;flame_particles		   	= weapons\generic_weapon03
 smoke_particles		   	= weapons\generic_shoot_00
 
 shell_point		 				= 0.0, 0.133, 0.047
@@ -138,7 +140,7 @@ light_var_color		 		= 0.05
 light_var_range		 		= 0.5
 light_time 		 				= 0.2
 
-ph_mass			 				= 1
+ph_mass			 				= 0.97;1
 ;cost			 					= 350
 
 ;addons
@@ -147,8 +149,8 @@ silencer_status				= 1
 grenade_launcher_status		= 0
 
 zoom_enabled					= true
-zoom_rotate_time				= 0.25
-scope_zoom_factor	    		= 55
+;zoom_rotate_time				= 0.25
+scope_zoom_factor	    		= 75;55
 
 ;звуки
 snd_draw							= weapons\pm_draw
@@ -156,30 +158,30 @@ snd_holster						= weapons\generic_holster
 snd_shoot						= weapons\n_pb_shot
 snd_empty						= weapons\generic_empty
 snd_reload						= weapons\pistol_reload
-snd_close						= weapons\generic_close
+;snd_close						= weapons\generic_close
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; silencer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-silencer_name  				= wpn_addon_silencer		; section name for the attachable silencer
-silencer_x 						= 65						; offset in inventory icon
-silencer_y 						= -18
+;silencer_name  				= wpn_addon_silencer		; section name for the attachable silencer
+;silencer_x 						= 65						; offset in inventory icon
+;silencer_y 						= -18
 
 ;params when silencer is attached
 ;similar to corresponding params without prefix silencer_
 
 ;silencer_flame_particles 	= weapons\generic_weapon01
-silencer_smoke_particles 	= weapons\generic_shoot_00
-snd_silncer_shot				= weapons\n_pb_shot
-silencer_light_color			= 0.6,0.5,0.3
-silencer_light_range			= 0.01
-silencer_light_var_color	= 0.05
-silencer_light_var_range	= 0.5
-silencer_light_time 			= 0.2
+;silencer_smoke_particles 	= weapons\generic_shoot_00
+;snd_silncer_shot				= weapons\n_pb_shot
+;silencer_light_color			= 0.6,0.5,0.3
+;silencer_light_range			= 0.01
+;silencer_light_var_color	= 0.05
+;silencer_light_var_range	= 0.5
+;silencer_light_time 			= 0.2
 
 [wpn_pb_hud]:hud_base
-zoom_hide_crosshair = true
+;zoom_hide_crosshair = false
 
 
 hands_position					= -0.021000,-0.160000,0.002500
@@ -206,8 +208,8 @@ fire_point			= 0,0.029,0.284
 fire_bone               	= wpn_body
 
 ;-delme begin
-anm_empty             	= walter99_idle, walter99_opened
-anm_close				= walter99_holster
+;anm_empty             	= walter99_idle, walter99_opened
+;anm_close				= walter99_holster
 ;-delme end
 anm_show						= pb_draw
 anm_show_empty					= pb_draw, pb_opened
@@ -239,11 +241,11 @@ anm_bore_empty					= pb_idle_bore, pb_opened
 aim_hud_offset_pos				= -0.107400, 0.034800, 0.050000
 aim_hud_offset_rot				= -0.012400, 0.003500,-0.023000
 
-gl_hud_offset_pos				= 0,0,0
-gl_hud_offset_rot				= 0,0,0
+;gl_hud_offset_pos				= 0,0,0
+;gl_hud_offset_rot				= 0,0,0
 
-lean_hud_offset_pos				= 0,0,0
-lean_hud_offset_rot				= 0,0,0
+;lean_hud_offset_pos				= 0,0,0
+;lean_hud_offset_rot				= 0,0,0
 
 aim_hud_offset_pos_16x9			= -0.167800, 0.065800, 0.000000
 aim_hud_offset_rot_16x9			=  0.018000, 0.054000, 0.002000
