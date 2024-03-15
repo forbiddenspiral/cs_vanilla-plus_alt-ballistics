@@ -16,7 +16,7 @@ ef_weapon_type			= 8
 
 default_to_ruck         = false
 sprint_allowed       	= true
-control_inertion_factor = 1.0
+;control_inertion_factor = 1.0
 
 ;---DOF-------------------------------------------------------------------------
 ;zoom_dof				= 0.5, 1.0, 180
@@ -31,12 +31,13 @@ holder_fov_modifier		= 0.3              ; во сколько раз увеличивается eye_fov
 cost					= 25000
 weapon_class			= sniper_rifle
 
-ammo_limit				= 60
-ammo_current			= 10
+;ammo_limit				= 60
+;ammo_current			= 10
 ammo_elapsed			= 0
 
 ammo_mag_size			= 10
 ammo_class				= ammo_gauss
+fire_modes				= 1
 hand_dependence         = 1
 single_handed           = 0
 
@@ -96,7 +97,7 @@ fire_point2				= 0.00,0.12,0.69
 
 flame_particles         = weapons\generic_weapon_gauss
 smoke_particles	 		= weapons\generic_weapon07
-rpm_empty_click 		= 120
+;rpm_empty_click 		= 120
 
 shell_point		 		= 0.0, 0.129, 0.192
 shell_dir		 		= 0.0, 0.0, 0.4
@@ -109,7 +110,7 @@ PDM_disp_crouch	 		= 1.0
 PDM_disp_crouch_no_acc 	= 1.0
 
 ; ttc
-hit_power           		= 2.0, 2.0, 2.0, 2.0
+hit_power           		= 2.0;2.0, 2.0, 2.0, 2.0
 hit_impulse		 			= 100
 hit_type 					= fire_wound
 
@@ -121,7 +122,7 @@ hit_probability_gd_master	= 1
 fire_distance           = 1000
 bullet_speed		 	= 15000	;начальная скорость пули
 rpm                     = 25;30
-rpm_empty_click         = 200
+;rpm_empty_click         = 200
 ; end ttc
 
 use_aim_bullet			= false		;Поддерживается ли первая суппер пуля
@@ -136,7 +137,7 @@ strap_orientation      	= -15,-9,110				; (3rd person view in degrees)
 strap_bone0					= bip01_spine2
 strap_bone1					= bip01_spine1
 
-startup_ammo            = 10
+;startup_ammo            = 10
 visual                  = dynamics\weapons\wpn_gauss\wpn_gauss.ogf
 
 light_disabled				= false
@@ -155,13 +156,13 @@ silencer_status			= 0
 grenade_launcher_status	= 0
 
 zoom_enabled				= true
-zoom_rotate_time			= 0.25
+;zoom_rotate_time			= 0.25
 scope_zoom_factor			= 5		;ПСО-1 4X
 
 scope_texture				= wpn_crosshair_l85
-scope_name 					= wpn_addon_scope
-scope_x 						= 60
-scope_y 						= -2
+;scope_name 					= wpn_addon_scope
+;scope_x 						= 60
+;scope_y 						= -2
 
 ;звуки
 snd_draw			  			= weapons\svd_draw
@@ -169,12 +170,12 @@ snd_holster					= weapons\generic_holster
 snd_shoot					= weapons\gauss_shoot
 snd_empty					= weapons\gen_empty
 snd_reload					= weapons\gauss_reload
-snd_close					= weapons\generic_close
+;snd_close					= weapons\generic_close
 snd_bore					= weapons\draw_silent
 snd_bore1					= weapons\gauss_bore_2
 
 [wpn_gauss_hud]:hud_base
-zoom_hide_crosshair		= true
+;zoom_hide_crosshair		= false
 attach_place_idx			= 0
 item_visual             = dynamics\weapons\wpn_gauss\wpn_gauss_hud.ogf
 
@@ -203,11 +204,11 @@ aim_hud_offset_rot		= -0.002000,0.000600,-0.010000
 aim_hud_offset_pos_16x9     		= -0.111500,0.032500,-0.130500
 aim_hud_offset_rot_16x9     				= 0.012500,0.002500,-0.010000
 
-gl_hud_offset_pos			= 0,0,0
-gl_hud_offset_rot			= 0,0,0
+;gl_hud_offset_pos			= 0,0,0
+;gl_hud_offset_rot			= 0,0,0
 
-lean_hud_offset_pos		= 0,0,0
-lean_hud_offset_rot		= 0,0,0
+;lean_hud_offset_pos		= 0,0,0
+;lean_hud_offset_rot		= 0,0,0
 
 anm_show						= gauss_draw
 anm_hide             	= gauss_holster
@@ -228,16 +229,16 @@ $spawn                  = "weapons\gauss_aes"
 hud 							= wpn_gauss_hud
 
 ; ttc
-hit_power           		= 0.14, 0.14, 0.14, 0.14
+hit_power           		= 0.14;0.14, 0.14, 0.14, 0.14
 hit_impulse		 			= 60
 hit_type 					= telepatic
 
-hit_probability_gd_novice	= 1
-hit_probability_gd_stalker	= 1
-hit_probability_gd_veteran	= 1
-hit_probability_gd_master	= 1
+;hit_probability_gd_novice	= 1
+;hit_probability_gd_stalker	= 1
+;hit_probability_gd_veteran	= 1
+;hit_probability_gd_master	= 1
 
-fire_distance           = 1000
+;fire_distance           = 1000
 bullet_speed		 		= 100000	;начальная скорость пули
 rpm                     = 20
 
@@ -246,4 +247,4 @@ ammo_current			= 100
 ammo_elapsed			= 100
 
 ammo_mag_size			= 100
-ammo_class				= ammo_gauss
+;ammo_class				= ammo_gauss
