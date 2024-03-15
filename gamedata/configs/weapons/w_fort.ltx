@@ -14,7 +14,7 @@ description					= st_wpn_fort_descr
 ef_weapon_type			  	= 5
 
 ;---DOF-------------------------------------------------------------------------
-zoom_dof					= -1000, 1.0, 1000 
+;zoom_dof					= -1000, 1.0, 1000 
 reload_dof				= 0.0, 0.5, 5, 2.25
 ;-----------------------------------------------------------------------------
 upgrades                = up_gr_ab_fort, up_gr_cd_fort, up_gr_e_fort, up_gr_f_fort, up_gr_g_fort, up_gr_h_fort
@@ -29,12 +29,13 @@ holder_fov_modifier		= 1.0              ; во сколько раз увеличивается eye_fov
 
 cost					= 600
 
-ammo_limit		 		= 120
-ammo_current		 	= 90
+;ammo_limit		 		= 120
+;ammo_current		 	= 90
 ammo_elapsed		 	= 12
 
 ammo_mag_size		 	= 12
 ammo_class		 		= ammo_9x18_fmj, ammo_9x18_pmm
+fire_modes		 		= 1
 
 hand_dependence		 	= 1
 single_handed			= 1
@@ -49,7 +50,7 @@ inv_name				= st_wpn_fort
 inv_name_short			= st_wpn_fort
 inv_weight				= 0.83
 
-inv_grid_width			= 1
+inv_grid_width			= 2;1
 inv_grid_height			= 1
 inv_grid_x				= 10
 inv_grid_y				= 8
@@ -75,18 +76,19 @@ cam_step_angle_horz		= 1.0	;(degree) size of step camera moved in horizontal pos
 
 fire_dispersion_condition_factor = 5	;увеличение дисперсии в процентах при максимальном износе
 misfire_probability 		= 0.025	;вероятность осечки при максимальном износе
+misfire_condition_k 		= 0.05	; decane: missing by default
 condition_shot_dec 			= 0.0008 ;увеличение износа при каждом выстреле
 
 ;-------------------------------------------------------------------------------
 ; ttc
-hit_power           		= 0.5, 0.5, 0.5, 0.5
-hit_impulse	 		 		= 75
+hit_power           		= 0.35;0.5, 0.5, 0.5, 0.5
+hit_impulse	 		 		= 1;75
 hit_type 					= fire_wound
 
-hit_probability_gd_novice	= 0.80
-hit_probability_gd_stalker	= 0.80
-hit_probability_gd_veteran	= 0.80
-hit_probability_gd_master	= 0.80
+hit_probability_gd_novice	= 1;0.80
+hit_probability_gd_stalker	= 1;0.80
+hit_probability_gd_veteran	= 1;0.80
+hit_probability_gd_master	= 1;0.80
 
 PDM_disp_base 				= 1.0
 PDM_disp_vel_factor 		= 0.3
@@ -97,16 +99,16 @@ PDM_disp_crouch_no_acc 		= 1.0
 use_aim_bullet				= true		;Поддерживается ли первая суппер пуля
 time_to_aim					= 1.0
 
-fire_distance           	= 40
-bullet_speed		 		= 220
+fire_distance           	= 700;40
+bullet_speed		 		= 320;220
 rpm                     	= 250
-rpm_empty_click 	 		= 200
+;rpm_empty_click 	 		= 200
 ; end ttc
 
-silencer_hit_power      	= 0.55
-silencer_hit_impulse	 	= 90
-silencer_fire_distance  	= 100
-silencer_bullet_speed		= 240
+silencer_hit_power      	= 0.35;0.55
+silencer_hit_impulse	 	= 1;90
+silencer_fire_distance  	= 700;100
+silencer_bullet_speed		= 320;240
 
 ;-------------------------------------------------------------------------------
 hud                      	= wpn_fort_hud
@@ -139,17 +141,17 @@ light_var_color		 		= 0.05
 light_var_range		 		= 0.5
 light_time 		 				= 0.2
 
-ph_mass			 				= 1
+ph_mass			 				= 0.83;1
 ;cost			 					= 350
 
 ;addons
 scope_status					= 0
-silencer_status				= 0
+silencer_status				= 2
 grenade_launcher_status		= 0
 
 zoom_enabled					= true
-zoom_rotate_time				= 0.25
-scope_zoom_factor	    		= 55
+;zoom_rotate_time				= 0.25
+scope_zoom_factor	    		= 75;55
 
 ;звуки
 snd_draw							= weapons\fort_draw
@@ -157,15 +159,15 @@ snd_holster						= weapons\generic_holster
 snd_shoot						= weapons\n_fort_shot
 snd_empty						= weapons\pistol_empty
 snd_reload						= weapons\pistol_reload
-snd_close						= weapons\generic_close
+;snd_close						= weapons\generic_close
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; silencer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 silencer_name  				= wpn_addon_silencer		; section name for the attachable silencer
-silencer_x 						= 36						; offset in inventory icon
-silencer_y 						= -17
+silencer_x 						= 49;36						; offset in inventory icon
+silencer_y 						= -15;-17
 
 ;params when silencer is attached
 ;similar to corresponding params without prefix silencer_
@@ -180,7 +182,7 @@ silencer_light_var_range	= 0.5
 silencer_light_time 			= 0.2
 
 [wpn_fort_hud]:hud_base
-zoom_hide_crosshair = true
+;zoom_hide_crosshair = false
 
 
 hands_position					= -0.021000,-0.160000, 0.002500
@@ -201,8 +203,8 @@ fire_point			= 0,0.04,0.149
 fire_bone               	= wpn_body
 
 ;-delme begin
-anm_empty             	= walter99_idle, walter99_opened
-anm_close				= walter99_holster
+;anm_empty             	= walter99_idle, walter99_opened
+;anm_close				= walter99_holster
 ;-delme end
 anm_show					= fort_draw
 anm_show_empty				= fort_draw, fort_opened
@@ -237,11 +239,11 @@ aim_hud_offset_rot				=  0.003000, 0.006300,-0.025000
 aim_hud_offset_pos_16x9			= -0.170200, 0.074400, 0.000000
 aim_hud_offset_rot_16x9			=  0.034000, 0.057500, 0.010000
 
-gl_hud_offset_pos				= 0,0,0
-gl_hud_offset_rot				= 0,0,0
+;gl_hud_offset_pos				= 0,0,0
+;gl_hud_offset_rot				= 0,0,0
 
-lean_hud_offset_pos			= 0,0,0
-lean_hud_offset_rot			= 0,0,0
+;lean_hud_offset_pos			= 0,0,0
+;lean_hud_offset_rot			= 0,0,0
 
 
 ;-----------------------------------------------------------------------------
