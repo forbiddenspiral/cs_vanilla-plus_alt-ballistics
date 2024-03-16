@@ -15,7 +15,7 @@ ef_main_weapon_type			= 1
 ef_weapon_type				= 7
 
 ;---DOF-------------------------------------------------------------------------
-zoom_dof					= 0.5, 1.0, 180
+zoom_dof					= 0.5, 1.0, 600;180
 ;-----------------------------------------------------------------------------
 
 upgrades                = up_gr_ab_toz34, up_gr_c_toz34, up_gr_d_toz34, up_gr_e_toz34
@@ -27,18 +27,19 @@ holder_range_modifier	= 1.0               ; во сколько раз увеличивается eye_ran
 holder_fov_modifier		= 0.7              ; во сколько раз увеличивается eye_fov
 ;-------------------------------------------------------------------------------
 
-tri_state_reload			= off
+;tri_state_reload			= off
 
 cost            = 400
 weapon_class	= shotgun
 
 
-ammo_limit		 			= 60
-ammo_current		 		= 10
+;ammo_limit		 			= 60
+;ammo_current		 		= 10
 ammo_elapsed		 		= 0
 
 ammo_mag_size      			= 2
 ammo_class		 			= ammo_12x70_buck, ammo_12x76_zhekan, ammo_12x76_dart
+fire_modes		 			= 1
 
 ;-------------------------------------------------------------------------------
 ;базовая дисперсия
@@ -66,7 +67,7 @@ zoom_cam_step_angle_horz    = 1.0
 
 fire_dispersion_condition_factor = 10	;увеличение дисперсии в процентах при максимальном износе
 misfire_probability 		= 0.0	;вероятность осечки при максимальном износе
-misfire_condition_k			= 0.05
+misfire_condition_k			= 0.0;0.05
 condition_shot_dec      	= 0.005 ;увеличение износа при каждом выстреле
 ;-------------------------------------------------------------------------------
 
@@ -85,7 +86,7 @@ animation_slot  = 3     ; type of the animation that will be used
 
 inv_name    	= st_wpn_toz34
 inv_name_short 	= st_wpn_toz34
-inv_weight     	= 3.1
+inv_weight     	= 3.3;3.1
 
 inv_grid_width  = 6
 inv_grid_height	= 1
@@ -99,7 +100,7 @@ kill_msg_height  = 23
 
 flame_particles		   	= weapons\generic_weapon05
 smoke_particles		   	= weapons\generic_shoot_00
-rpm_empty_click 	   	= 200
+;rpm_empty_click 	   	= 200
 
 PDM_disp_base 			= 1.0
 PDM_disp_vel_factor     = 2.0
@@ -108,17 +109,17 @@ PDM_disp_crouch	 			= 1.0
 PDM_disp_crouch_no_acc 		= 1.0
 
 ; ttc
-hit_power       = 1.0, 1.0, 1.0, 1.0
-hit_impulse     = 100
+hit_power       = 1;1.0, 1.0, 1.0, 1.0
+hit_impulse     = 1;100
 hit_type 		= fire_wound
 
-hit_probability_gd_novice	= 0.80
-hit_probability_gd_stalker	= 0.80
-hit_probability_gd_veteran	= 0.80
-hit_probability_gd_master	= 0.80
+hit_probability_gd_novice	= 1;0.80
+hit_probability_gd_stalker	= 1;0.80
+hit_probability_gd_veteran	= 1;0.80
+hit_probability_gd_master	= 1;0.80
 
-fire_distance           = 70
-bullet_speed         	= 250 ;начальная скорость пули
+fire_distance           = 400;70
+bullet_speed         	= 350;250 ;начальная скорость пули
 rpm                     = 1000
 ; end ttc
 
@@ -131,7 +132,7 @@ strap_orientation      		= -15,-9,110				; (3rd person view in degrees)
 strap_bone0					= bip01_spine2
 strap_bone1					= bip01_spine1
 
-startup_ammo             	= 10
+;startup_ammo             	= 10
 visual                   	= dynamics\weapons\wpn_toz34\wpn_toz34.ogf
 
 light_color		 			= 0.6,0.5,0.3
@@ -140,7 +141,7 @@ light_var_color		 		= 0.05
 light_var_range		 		= 0.5
 light_time 		 			= 0.2
 
-ph_mass			 			= 3
+ph_mass			 			= 3.3;3
 ;cost			 			= 900
 
 ;addons
@@ -149,7 +150,7 @@ silencer_status				= 0
 grenade_launcher_status		= 0
 
 zoom_enabled				= true
-scope_zoom_factor	    	= 55
+scope_zoom_factor	    	= 75;55
 
 ;звуки
 snd_draw						= weapons\generic_draw
@@ -157,7 +158,7 @@ snd_holster					= weapons\generic_holster
 snd_shoot         		= weapons\n_toz34_shot
 snd_empty					= weapons\generic_empty
 snd_reload					= weapons\toz34_reload
-snd_shoot_duplet  		= weapons\n_toz34_shot
+;snd_shoot_duplet  		= weapons\n_toz34_shot
 snd_bore				= weapons\toz34_bore
 
 snd_shoot_1             = weapons\n_toz34_shot
@@ -167,7 +168,7 @@ snd_add_cartridge			= weapons\w1300_load		;was gen_grenload
 snd_open_weapon			= weapons\spas12_close
 
 [wpn_toz34_hud]:hud_base
-zoom_hide_crosshair				= true
+;zoom_hide_crosshair				= false
 
 hands_position					= -0.144001,-0.129499,0.039500
 hands_orientation				= 0.399970,0.399999,-2.000002
