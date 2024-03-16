@@ -15,7 +15,7 @@ ef_main_weapon_type			= 1
 ef_weapon_type				= 7
 
 ;---DOF-------------------------------------------------------------------------
-zoom_dof					= 0.5, 1.0, 180
+zoom_dof					= 0.5, 1.0, 600;180
 ;-----------------------------------------------------------------------------
 upgrades                = up_gr_ab_wincheaster1300, up_gr_cd_wincheaster1300, up_gr_e_wincheaster1300, up_gr_f_wincheaster1300, up_gr_g_wincheaster1300
 installed_upgrades      =
@@ -32,13 +32,13 @@ cost					 	= 1250
 weapon_class			 	= shotgun
 
 
-ammo_limit		 			= 60
-ammo_current		 		= 10
+;ammo_limit		 			= 60
+;ammo_current		 		= 10
 ammo_elapsed		 		= 0
 
 ammo_mag_size		 		= 6
 ammo_class		 			= ammo_12x70_buck, ammo_12x76_zhekan, ammo_12x76_dart
-fire_modes					= 1, -1
+fire_modes					= 1;, -1
 
 ;-------------------------------------------------------------------------------
 ;базовая дисперсия
@@ -98,7 +98,7 @@ kill_msg_height		= 20
 
 flame_particles		   	= weapons\generic_weapon05
 smoke_particles		   	= weapons\generic_shoot_00
-rpm_empty_click 	   	= 200
+;rpm_empty_click 	   	= 200
 
 PDM_disp_base 			= 1.0
 PDM_disp_vel_factor 	= 1.7
@@ -108,17 +108,17 @@ PDM_disp_crouch_no_acc 		= 1.0
 
 ; ttc
 
-hit_power        			= 1.00, 1.00, 1.00, 1.00
-hit_impulse      			= 120
+hit_power        			= 0.9;1.00, 1.00, 1.00, 1.00
+hit_impulse      			= 1;120
 hit_type 					= fire_wound
 
-hit_probability_gd_novice	= 0.70
-hit_probability_gd_stalker	= 0.70
-hit_probability_gd_veteran	= 0.70
-hit_probability_gd_master	= 0.70
+hit_probability_gd_novice	= 1;0.70
+hit_probability_gd_stalker	= 1;0.70
+hit_probability_gd_veteran	= 1;0.70
+hit_probability_gd_master	= 1;0.70
 
-fire_distance            	= 50
-bullet_speed			 	= 220			;начальная скорость пули
+fire_distance            	= 400;50
+bullet_speed			 	= 403;220			;начальная скорость пули
 rpm                      	= 80            ;60 = 1 секунда
 ; end ttc
 
@@ -131,7 +131,7 @@ strap_orientation      		= -15,-9,110				; (3rd person view in degrees)
 strap_bone0					= bip01_spine2
 strap_bone1					= bip01_spine1
 
-startup_ammo             	= 10
+;startup_ammo             	= 10
 visual                   	= dynamics\weapons\wpn_winchester1300\wpn_winchester1300.ogf
 
 light_color		 			= 0.6,0.5,0.3
@@ -149,7 +149,7 @@ silencer_status				= 0
 grenade_launcher_status		= 0
 
 zoom_enabled				= true
-scope_zoom_factor	    	= 55
+scope_zoom_factor	    	= 75;55
 
 ;звуки
 snd_draw					= weapons\generic_draw
@@ -157,9 +157,9 @@ snd_holster					= weapons\generic_holster
 snd_shoot					= weapons\winchester1300_shot
 snd_empty					= weapons\generic_empty
 snd_reload					= weapons\winchester1300_reload_end
-snd_shoot_duplet			= weapons\winchester1300_shot
+;snd_shoot_duplet			= weapons\winchester1300_shot
 
-snd_open_weapon            = weapons\draw_silent
+;snd_open_weapon            = weapons\draw_silent
 snd_add_cartridge			= weapons\w1300_load
 snd_close_weapon        = weapons\winchester1300_reload_end
 
