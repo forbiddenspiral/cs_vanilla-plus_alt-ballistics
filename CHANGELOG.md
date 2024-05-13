@@ -1,5 +1,12 @@
 # Changelog
 
+v0.2 - 05/13/2024
+
+- Enhanced Visual Consistency:
+  - Updated the inventory icon for MP5 to match the world model used by the OSRM mod, ensuring a more cohesive visual experience.
+- Enhanced Iron Sight Visuals (w_ak74u.ltx):
+  - Increased scope_zoom_factor to 75 in w_ak74u.ltx for consistency with other iron sight weapons, resulting in a more uniform aiming experience.
+
 v0.1 - 05/04/2024
 
 - Gameplay Adjustments:
